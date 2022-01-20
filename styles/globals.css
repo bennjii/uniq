@@ -15,12 +15,10 @@ a {
   box-sizing: border-box;
 }
 
-body {
-  padding: 1rem;  
-  background-color: black;
-  
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex: 1;
+:root {
+  --tw-gradient-from: #111827;
+  --tw-gradient-stops: var(--tw-gradient-from),var(--tw-gradient-to,rgb(17 24 39/0));
+  --tw-gradient-to: #000;
+  --tw-text-opacity: 1;
+  --color: rgb(245 245 245/var(--tw-text-opacity));
 }

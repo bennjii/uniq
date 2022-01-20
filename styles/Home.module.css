@@ -1,5 +1,5 @@
 .uniq {
-  padding: 5px;
+  position: relative;
 }
 
 .uniq:hover {
@@ -24,13 +24,16 @@
   gap: 3px;
 }
 
-.uniqParent > div > div {
+.uniqParent > div:not(.expanded) > div {
   height: 10px;  
   width: 10px;
   background-color: rgb(255, 255, 255);
 
   animation: .55s ease in;
   border-radius: 1px;
+
+  /* transition: .55s ease all; */
+  transition: .55s ease all;
 
   opacity: var(--opacity);  
 }
@@ -48,9 +51,129 @@
 }
 
 .expanded {
-  background-color: rgba(255, 255,255,0.4);
-  padding: 5px;
+  /* background-color: rgba(255, 255,255,0.1); */
+  /* backdrop-filter: blur(1px); */
   border-radius: 5px;
 
+  width: 114px;
+  height: 36px;
+
+  position: absolute;
+  top: 0;
+
   color: #fff;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px !important;
+
+  flex: 1;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.expanded {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.expanded > div:first-of-type {
+  flex: 1;
+}
+
+.expanded > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: fit-content;
+  align-items: center;
+}
+
+.uniqGroup {
+  position: relative;
+  padding: 5px;
+  width: fit-content;
+}
+
+.expanded > div > * {
+  opacity: 0.8;
+}
+
+.expanded > div > *:hover {
+  opacity: 1;
+}
+
+.uniqParent > div > svg {
+  transition: .55s ease all;
+}
+
+.expanded {
+  opacity: 0;
+  transition: .55s ease all;
+  transition-delay: .05s;
+
+  font-size: 18px;
+}
+
+.expanded:hover {
+  opacity: 1;
+}
+
+.expanded p {
+  line-height: 14px;
+}
+
+.profileParent {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  height: 100vh;
+  width: 100vw;
+
+  background: linear-gradient(to top right,var(--tw-gradient-stops)) !important;
+}
+
+.profileParent > div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.profileParent > div > div:first-of-type {
+  border-bottom: 1px solid rgba(255, 255,255,0.05);
+
+  width: 100%;
+}
+
+.profileParent > div > div:not(:first-of-type) {
+  color: #fff;
+  flex: 1;
+}
+
+.profileParent li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profGrid {
+  display: grid;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1rem;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  grid-template-rows: repeat(5, 25px);
 }
