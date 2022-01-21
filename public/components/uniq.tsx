@@ -6,7 +6,7 @@ import { IoBarcodeOutline } from 'react-icons/io5'
 import styles from '../../styles/Home.module.css'
 import { generateUnique } from '../uniq';
 
-const Uniq: React.FC<{ uniq: number[][], color?: string, invert?: boolean, obfuscate?: boolean }> = ({ uniq, color, invert, obfuscate }) => {
+const Uniq: React.FC<{ uniq: number[][], color?: string, invert?: boolean, obfuscate?: boolean, noHover?: boolean }> = ({ uniq, color, invert, obfuscate, noHover }) => {
 	const [ uniq_, setUniq ] = useState(null);
     const [ clicked, setClicked ] = useState(false);
     const router = useRouter()
@@ -28,7 +28,7 @@ const Uniq: React.FC<{ uniq: number[][], color?: string, invert?: boolean, obfus
 
 	return (
         <div className={styles.uniqGroup}>
-            <div className={styles.uniq} onMouseOver={() => setClicked(true)} onMouseLeave={() => setClicked(false)}>
+            <div className={styles.uniq} onMouseOver={() => setClicked(noHover ? false : true)} onMouseLeave={() => setClicked(false)}>
                 <div className={styles.uniqParent}>
                     {
                         uniq_ ? 

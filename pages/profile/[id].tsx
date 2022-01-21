@@ -23,10 +23,11 @@ const Profile = () => {
         <div className={styles.profileParent}>
             <div>
                 <div>
-                    <Uniq uniq={uniq} /> 
+                    <Uniq uniq={uniq} noHover={true} /> 
+                    <h2>Ben White</h2>
                 </div>
                 <div>
-                    <p>Just a little description about me!</p>
+                    <p>I'm a software developer working towards creating a better world for all! I work primarily front-end but have plenty of experience back-end too! I am not just a developer but a student and a designer as well, so hit me up through the links below and we can get talking!</p>
 
                     <ul className={styles.profGrid}
                     >
