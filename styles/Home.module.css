@@ -188,28 +188,54 @@
   text-align: justify;
 }
 
+.profileParent li > div:last-of-type {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  height: 1.3rem;
+  width: 1.3rem;
 
-.profileParent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
+  aspect-ratio: 1;
 }
 
 .profileParent li {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 1rem;
 
   height: 50px;
   border-radius: 0.5rem;
   border: 1px solid hsla(0,0%,100%,.1);
   padding: 14.4px 18px;
-  display: -moz-box;
+
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   background-image: linear-gradient(to top right,var(--tw-gradient-stops));
   cursor: pointer;
+}
+
+.profileParent li:hover {
+  background-color: rgb(255 255 255/.1);
+}
+
+.profileParent span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileParent li > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 1rem;
 }
 
 .profGrid {

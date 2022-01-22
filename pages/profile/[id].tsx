@@ -27,7 +27,7 @@ const Profile = () => {
                     <h2>Ben White</h2>
                 </div>
                 <div>
-                    <p>I'm a software developer working towards creating a better world for all! I work primarily front-end but have plenty of experience back-end too! I am not just a developer but a student and a designer as well, so hit me up through the links below and we can get talking!</p>
+                    <p>I{'\''}m a software developer working towards creating a better world for all! I work primarily front-end but have plenty of experience back-end too! I am not just a developer but a student and a designer as well, so hit me up through the links below and we can get talking!</p>
 
                     <ul className={styles.profGrid}
                     >
