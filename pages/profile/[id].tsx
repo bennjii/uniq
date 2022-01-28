@@ -22,8 +22,11 @@ const Profile = () => {
 	return (
         <div className={styles.profileParent}>
             <div>
+                <Uniq uniq={uniq} noHover={true} /> 
+            </div>
+
+            <div>
                 <div>
-                    <Uniq uniq={uniq} noHover={true} /> 
                     <h2>Ben White</h2>
                 </div>
                 <div>
